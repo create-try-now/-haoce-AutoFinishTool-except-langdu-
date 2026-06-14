@@ -1,0 +1,13 @@
+如何使用该代码
+
+打开.py文件
+USERNAME , PASSWORD ,BASE_URL,AI_ENABLED ,AI_CHAT_URL ,AI_API_KEY ,AI_MODEL ,AI_MAX_TOKENS ,AI_TEMPERATURE,AI_TIMEOUT
+# -------- 联网搜索配置（可选，用于生成更丰富的内容）--------
+SEARCH_ENABLED = False                  # 是否启用联网搜索
+# 搜索 API 地址，需自行搭建或使用第三方服务。{query} 会被自动替换为关键词（已 URL 编码）
+SEARCH_URL = "http://localhost:8080/search?q={query}"
+SEARCH_API_KEY = ""                     # 搜索 API 的密钥（如需），会自动加在 Authorization 头
+SEARCH_TIMEOUT = 10                     # 搜索请求超时秒数
+SEARCH_RESULT_COUNT = 3                 # 注入到 AI 提示中的搜索结果数量
+这些是主要修改的函数其中前2项尤其重要,需要输入账号密码,其余项目主要是ai和搜索引擎,搜索系统暂时未实装,可以自己改造代码实现.ai系统支持key和本地openai格式调用.
+
